@@ -41,7 +41,7 @@ A Streamlit app to upload PDFs, extract content, and ask questions using AI mode
 ## Usage
 Run the app:
 ```bash
-streamlit run app_update.py
+streamlit run pdf_chatbbot.py
 ```
 1. Upload PDFs.
 2. Select the model (OpenAI or Hugging Face).

@@ -58,3 +58,33 @@ A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between 
   ```bash
   pip install faiss-cpu
   ```
+
+flowchart LR
+    %% --- Input Unstructured Data ---
+    subgraph A[Unstructured Data]
+        A1[Images]
+        A2[Tables]
+        A3[Text]
+    end
+
+    %% --- Summarization Step ---
+    A --> B(LLM Summarization)
+    B --> C[Generated Summaries <br>(+ doc IDs)]
+
+    %% --- Document Store ---
+    A --> D[Document Store<br>(stores original data + IDs)]
+
+    %% --- Vector Embeddings ---
+    C --> E[Create Text Embeddings]
+    E --> F[Vector Database<br>(stores embeddings + IDs)]
+
+    %% --- Query Phase ---
+    subgraph Q[User Query Flow]
+      Q1([User Query]) --> Q2[Embed Query &<br>search Vector DB]
+      Q2 --> F
+      F --> Q3[Relevant Summaries<br>(+ doc IDs)]
+      Q3 --> Q4[Retrieve Full Documents<br>from Document Store]
+      D --> Q4
+      Q4 --> Q5([Final Retrieved Documents])
+    end
+

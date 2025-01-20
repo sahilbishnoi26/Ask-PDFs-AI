@@ -1,22 +1,21 @@
 # Ask-PDFs AI
 
-A Streamlit app to upload PDFs, extract content, and ask questions using AI models.
+A Streamlit app to upload PDFs, extract content, and ask questions using AI models. Users can dynamically choose between OpenAI and Hugging Face models for both embeddings and language tasks.
 
 ## Features
-- Upload multiple PDFs and extract text.
-- Split text into chunks for efficient processing.
-- Use OpenAI or Hugging Face models for embeddings and LLMs.
-  - **Hugging Face**: `flan-t5-base` for language tasks and `hkunlp/instructor-xl` for embeddings.
-  - **OpenAI**: GPT-based models for both embeddings and Q&A.
-- Semantic search with FAISS for efficient retrieval.
-- Conversational Q&A with context-aware responses.
+- **Upload PDFs**: Extract and preprocess text from multiple PDFs.
+- **Model Selection**:
+  - **Embeddings**: Choose between OpenAI embeddings or Hugging Face's `hkunlp/instructor-xl`.
+  - **LLMs**: Choose between OpenAI GPT-based models or Hugging Face's `google/flan-t5-base`.
+- **Semantic Search**: FAISS-based similarity search for efficient retrieval.
+- **Conversational Q&A**: Interactive chat with memory of the conversation.
 
 ## Technologies Used
-- **Streamlit**: For the web interface.
-- **LangChain**: Manages conversational chains and retrieval workflows.
-- **FAISS**: Enables efficient vector-based similarity search.
-- **Hugging Face Transformers**: Provides embeddings and LLM functionality.
-- **OpenAI**: Optional alternative for embeddings and Q&A.
+- **Streamlit**: Interactive user interface.
+- **LangChain**: Manages retrieval and conversational workflows.
+- **FAISS**: Vector-based similarity search.
+- **Hugging Face Transformers**: Provides embeddings and language model functionality.
+- **OpenAI**: Optional integration for embeddings and LLMs.
 - **PyPDF2**: Extracts text from PDFs.
 
 ## Installation
@@ -39,14 +38,21 @@ A Streamlit app to upload PDFs, extract content, and ask questions using AI mode
    ```
 
 ## Usage
-Run the app:
-```bash
-streamlit run pdf_chatbbot.py
-```
-1. Upload PDFs.
-2. Select the model (OpenAI or Hugging Face).
-3. Ask questions through the interface.
-4. Get AI-generated answers.
+1. Run the app:
+   ```bash
+   streamlit run app_update.py
+   ```
+2. In the sidebar:
+   - Upload one or more PDF files.
+   - Select your preferred embedding model (OpenAI or Hugging Face).
+   - Select your preferred LLM (OpenAI or Hugging Face).
+   - Click "Process" to prepare the app.
+3. In the main area, ask questions and receive AI-generated answers.
 
-## License
-This project is licensed under the MIT License.
+## Troubleshooting
+- **Missing API Token**: Ensure `HUGGINGFACEHUB_API_TOKEN` and `OPENAI_API_KEY` are correctly set in the `.env` file or as environment variables.
+- **CUDA Out of Memory**: Use smaller models like `flan-t5-base` or run on CPU.
+- **FAISS Warnings**: Install FAISS with AVX2 support using:
+  ```bash
+  pip install faiss-cpu
+  ```

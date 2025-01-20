@@ -1,6 +1,6 @@
 # Ask-PDFs AI
 
-A Streamlit app to upload PDFs, extract content, and ask questions using AI models. Users can dynamically choose between OpenAI and Hugging Face models for both embeddings and language tasks.
+A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between OpenAI and Hugging Face models for both embeddings and language tasks in the app.
 
 ## Features
 - **Upload PDFs**: Extract and preprocess text from multiple PDFs.

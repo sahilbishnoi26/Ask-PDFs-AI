@@ -49,7 +49,7 @@ A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between 
    - Click "Process" to prepare the app.
 3. In the main area, ask questions and receive AI-generated answers.
 
-![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/pdf_chatbot.png?raw=true](https://github.com/sahilbishnoi26/Multiple-PDFs-Chatbot/blob/main/pdf_chatbot.jpg))
+![alt text]((https://github.com/sahilbishnoi26/Multiple-PDFs-Chatbot/blob/main/pdf_chatbot.jpg))
 
 ## Troubleshooting
 - **Missing API Token**: Ensure `HUGGINGFACEHUB_API_TOKEN` and `OPENAI_API_KEY` are correctly set in the `.env` file or as environment variables.

@@ -21,7 +21,7 @@ A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ask-pdfs-ai.git
+   git clone https://github.com/your-username/Multiple-PDFs-Chatbot.git
    cd ask-pdfs-ai
    ```
 2. Create a virtual environment and install dependencies:

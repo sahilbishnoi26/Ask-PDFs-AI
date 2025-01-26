@@ -22,7 +22,7 @@ A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between 
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Multiple-PDFs-Chatbot.git
-   cd ask-pdfs-ai
+   cd Multiple-PDFs-Chatbot
    ```
 2. Create a virtual environment and install dependencies:
    ```bash

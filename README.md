@@ -6,7 +6,7 @@ A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between 
 - **Upload PDFs**: Extract and preprocess text from multiple PDFs.
 - **Model Selection**:
   - **Embeddings**: Choose between OpenAI embeddings or Hugging Face's `hkunlp/instructor-xl`.
-  - **LLMs**: Choose between OpenAI GPT-based models or Hugging Face's `google/flan-t5-base`.
+  - **LLMs**: Choose between OpenAI GPT-based models or Hugging Face's `google/flan-t5-base`. Note: Better options available via Groq, use DeepSeek R1 or Llama 3.3
 - **Semantic Search**: FAISS-based similarity search for efficient retrieval.
 - **Conversational Q&A**: Interactive chat with memory of the conversation.
 

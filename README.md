@@ -1,4 +1,4 @@
-# Multiple-PDFs-Chatbot
+# Multiple-PDFs-RAG-Chatbot
 
 A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between OpenAI and Hugging Face models for both embeddings and LLMs in the app.
 
@@ -21,8 +21,8 @@ A Streamlit app to chat with uploaded pdfs using LLMs. Users can choose between 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Multiple-PDFs-Chatbot.git
-   cd Multiple-PDFs-Chatbot
+   git clone https://github.com/your-username/Multiple-PDFs-RAG-Chatbot.git
+   cd Multiple-PDFs-RAG-Chatbot
    ```
 2. Create a virtual environment and install dependencies:
    ```bash
